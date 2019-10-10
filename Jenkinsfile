@@ -4,23 +4,35 @@ pipeline {
          PATH='/usr/local/bin:/usr/bin:/bin'
       }
    stages {
-//       stage('NPM Setup') {
-//       steps {
-//          sh 'npm install'
-//       }
-//    }
+      stage('NPM Setup') {
+      steps {
+         sh 'npm install'
+      }
+   }
+
+stage('Platform add Android') {
+   steps {
+      sh 'ionic cordova platform add android@6.4.0'
+     } 
+  }
+
+  stage('Platform add iOS') {
+   steps {
+      sh 'ionic cordova platform add ios'
+     } 
+  }
+
+  stage('Android Build') {
+   steps {
+      sh 'ionic cordova build android --release'
+   }
+  }
 
    stage('IOS Build') {
    steps {
       sh 'ionic cordova build ios --release'
      } 
-  }
-
-   stage('Android Build') {
-   steps {
-      sh 'ionic cordova build android --release'
-   }
-  }
+  } 
 
    stage('APK Sign') {
    steps {
