@@ -2,6 +2,7 @@ pipeline {
    agent any
       environment {
          PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:ANDROID_HOME=/Users/mp1244/Library/Android/sdk:Users/mp1244/Library/Android/sdk/build-tools:Users/mp1244/Library/Android/sdk/platform-tools:Users/mp1244/Library/Android/sdk/tools:/Applications/Android Studio.app/Contents/gradle/gradle-5.1.1/bin:/Applications/Android Studio.app/Contents/gradle/gradle-5.1.1/:/tools:/platform-tools:/Users/mp1244/Library/Android/sdk/tools:/Users/mp1244/Library/Android/sdk/platform-tools'
+         ANDROID_HOME='/Users/mp1244/Library/Android/sdk'
       }
    stages {
       stage('NPM Setup') {
@@ -12,7 +13,7 @@ pipeline {
 
 stage('Platform add Android') {
    steps {
-      sh 'if () ionic cordova platform add android@6.4.0'
+      sh 'ionic cordova platform add android@6.4.0'
      } 
   }
 
