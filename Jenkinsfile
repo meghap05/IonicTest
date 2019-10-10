@@ -11,17 +11,17 @@ pipeline {
       }
    }
 
-stage('Platform add Android') {
-   steps {
-      sh 'ionic cordova platform add android@6.4.0'
-     } 
-  }
+// stage('Platform add Android') {
+//    steps {
+//       sh 'ionic cordova platform add android@6.4.0'
+//      } 
+//   }
 
-  stage('Platform add iOS') {
-   steps {
-      sh 'ionic cordova platform add ios'
-     } 
-  }
+//   stage('Platform add iOS') {
+//    steps {
+//       sh 'ionic cordova platform add ios'
+//      } 
+//   }
 
   stage('Android Build') {
    steps {
