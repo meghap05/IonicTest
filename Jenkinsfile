@@ -22,18 +22,16 @@ pipeline {
                 sh 'ionic cordova platform add ios'
             } 
         }
-
-//   stage('Android Build') {
-//    steps {
-//       sh 'ionic cordova build android --release'
-//    }
-//   }
-
-//    stage('IOS Build') {
-//    steps {
-//       sh 'ionic cordova build ios --release'
-//      } 
-//   } 
+        stage('Android Build') {
+            steps {
+                sh 'ionic cordova build android --prod --verbose'
+            }
+        }
+        stage('IOS Build') {
+            steps {
+                sh 'ionic cordova build ios --prod --verbose'
+            } 
+        } 
 
 //    stage('APK Sign') {
 //    steps {
