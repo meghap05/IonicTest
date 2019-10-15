@@ -1,28 +1,27 @@
 pipeline {
    agent any
       environment {
-         PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:ANDROID_HOME=/Users/mp1244/Library/Android/sdk:Users/mp1244/Library/Android/sdk/build-tools:Users/mp1244/Library/Android/sdk/platform-tools:Users/mp1244/Library/Android/sdk/tools:/Applications/Android Studio.app/Contents/gradle/gradle-5.1.1/bin:/Applications/Android Studio.app/Contents/gradle/gradle-5.1.1/:/tools:/platform-tools:/Users/mp1244/Library/Android/sdk/tools:/Users/mp1244/Library/Android/sdk/platform-tools'
-         ANDROID_HOME='/Users/mp1244/Library/Android/sdk'
-      }
-   stages {
-      stage('NPM Setup') {
-      steps {
-        //  sh 'npm install'
-        input('Do you want to proceed?')
-      }
-   }
-
-// stage('Platform add Android') {
-//    steps {
-//       sh 'ionic cordova platform add android@6.4.0'
-//      } 
-//   }
-
-//   stage('Platform add iOS') {
-//    steps {
-//       sh 'ionic cordova platform add ios'
-//      } 
-//   }
+          PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:ANDROID_HOME=/Users/mp1244/Library/Android/sdk:Users/mp1244/Library/Android/sdk/build-tools:Users/mp1244/Library/Android/sdk/platform-tools:Users/mp1244/Library/Android/sdk/tools:/Applications/Android Studio.app/Contents/gradle/gradle-5.1.1/bin:/Applications/Android Studio.app/Contents/gradle/gradle-5.1.1/:/tools:/platform-tools:/Users/mp1244/Library/Android/sdk/tools:/Users/mp1244/Library/Android/sdk/platform-tools'
+          ANDROID_HOME='/Users/mp1244/Library/Android/sdk'
+        }
+      stages {
+        stage('NPM Setup') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Platform add Android') {
+            when { expression { '/platforms/android' == 'false'} }
+            steps {
+                sh 'ionic cordova platform add android@6.4.0'
+            } 
+        }
+        stage('Platform add iOS') {
+            when { expression { '/platforms/ios' == 'false'} }
+            steps {
+                sh 'ionic cordova platform add ios'
+            } 
+        }
 
 //   stage('Android Build') {
 //    steps {
