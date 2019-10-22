@@ -21,11 +21,11 @@ pipeline {
                 sh 'ionic cordova platform add ios'
             } 
         }
-        stage('IOS Build') {
-            steps {
-                sh 'ionic cordova build ios --prod --verbose'
-            } 
-        } 
+        // stage('IOS Build') {
+        //     steps {
+        //         sh 'ionic cordova build ios --prod --verbose'
+        //     } 
+        // } 
         stage('Android Build') {
             steps {
                 sh 'ionic cordova build android --prod --verbose'
