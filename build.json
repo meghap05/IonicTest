@@ -1,0 +1,16 @@
+{
+    "ios": {
+        "debug": {
+            "codeSignIdentity": "iPhone Development",
+            "provisioningProfile": "050369d5-143d-48c1-b256-f0301f738f5a",
+            "provisioningProfileFile": "skylark_Development.mobileprovision",
+            "certificateFile" : "Certificates.p12"
+        },
+        "release": {
+            "codeSignIdentity": "iPhone Distribution",
+            "provisioningProfile": "050369d5-143d-48c1-b256-f0301f738f5a",
+            "provisioningProfileFile": "Skylark_Adhoc.mobileprovision",
+            "certificateFile" : "Certificates.p12"
+        }
+    }
+}
