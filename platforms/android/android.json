@@ -73,23 +73,23 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.kpisoft.skylark"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.kpisoft.skylark"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.kpisoft.skylark"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.kpisoft.skylark"
     },
     "cordova-plugin-ionic-webview": {
       "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.kpisoft.skylark"
     },
     "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.kpisoft.skylark"
     }
   },
   "dependent_plugins": {},
